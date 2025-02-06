@@ -4,9 +4,9 @@ eps_r = 4.4;
 mu_r = 1;                
 f = linspace(1e8, 10e9, 1000); 
 d = 0.002;                
-R = 10;                  
-L = 0.94e-6;            
-C0 = 4.31e-15;              
+R = 1;                  
+L = 0.94e-7;            
+C0 = 4.31e-14;              
 x_values = linspace(0, 0.7, 20); 
 cases = {'linear', 'cubic'};
 colors = {'r', 'b'};
@@ -65,7 +65,7 @@ for c = 1:length(cases)
     % Plot dati e dati corrotti
     plot(x_values, f_res/1e9, [colors{c} '-'], 'LineWidth', 2, 'DisplayName', [cases{c} ' pulito']);
     plot(x_values, f_res_noisy/1e9, [colors{c} 'o'], 'MarkerSize', 6, 'DisplayName', [cases{c} ' rumoroso']);
-    errorbar(x_values,f_res_noisy/1e9,f_res/1e9/10^4) % con SNR di 40dB le barre di errore non si vedono
+    errorbar(x_values,f_res_noisy/1e9,f_res/1e9/10^3) % con SNR di 40dB le barre di errore non si vedono
 end
 
 xlabel('x (normalizzato)');
