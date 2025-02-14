@@ -65,7 +65,7 @@ for c = 1:length(cases)
     % Plot dati e dati corrotti
     plot(x_values, f_res/1e9, [colors{c} '-'], 'LineWidth', 2, 'DisplayName', [cases{c} ' pulito']);
     plot(x_values, f_res_noisy/1e9, [colors{c} 'o'], 'MarkerSize', 6, 'DisplayName', [cases{c} ' rumoroso']);
-    errorbar(x_values,f_res_noisy/1e9,f_res/1e9/10^3) % con SNR di 40dB le barre di errore non si vedono
+    errorbar(x_values,f_res_noisy/1e9,f_res/1e9/10^2) % con SNR di 40dB le barre di errore non si vedono
 end
 
 xlabel('x (normalizzato)');
@@ -146,5 +146,7 @@ function [gamma, f_res] = calculate_gamma(f, C, R, L, d, eps_r, mu_r)
     [~, idx_min] = min(gamma);
     f_res = f(idx_min);
 end
+
+
 
 
