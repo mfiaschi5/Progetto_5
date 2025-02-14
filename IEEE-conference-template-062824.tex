@@ -117,7 +117,7 @@ Il coefficiente di riflessione è:
 \subsection{Parametri di Simulazione}
 \begin{itemize}
     \item Frequenza: \(\SIrange{1}{5}{GHz}\),
-    \item Parametri RLC: \(R = \SI{10}{\ohm},\ L = \SI{940}{nH},\ C_0 = \SI{4.31}{fF}\),
+    \item Parametri RLC: \(R = \SI{1}{\ohm},\ L = \SI{94}{nH},\ C_0 = \SI{43.1}{fF}\),
     \item Variazione di \(C\): \(0 \to + 50\%\).
 \end{itemize}
 
@@ -125,7 +125,7 @@ Il coefficiente di riflessione è:
 Siccome $ d \ll \lambda/n_r$ allora per le relazioni di dispersione $\beta d \ll 1$, ciò significa che in prima approssimazione $Z_{sub} \simeq \frac{Z_d^2}{Z_0}$. Questo significa che  la frequenza di risonanza, $Z_{sub}$ sarà solo un termine aggiuntivo da aggiungere alla parte resistiva, che sarà importante in quanto modifica il fattore di qualità $Q$. La scelta dei parametri sovrariportati ha tenuto conto anche del fatto appena discusso.
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/grafico.png}
+    \includegraphics[width=0.5\textwidth]{img/grafici.png}
     \caption{Andamento di \(|\Gamma|\) per variazione cubica di \(C\). }
     \label{fig:gamma}
 \end{figure}
@@ -152,7 +152,7 @@ Per $\alpha,\beta$ piccoli le espressioni possono essere approssimate. Ci aspett
     \label{fig:curve}
 \end{figure}
 \subsection{Analisi del Rumore}
-Con rumore gaussiano 30 dB, non sono state ottenute effettive differenze tra i valori di H senza e con il rumore. Nel codice è stato implementato un sistema per il calcolo di quest ultimo ma come si può notare in \autoref{fig:curve} non sono nemmeno rilevabili nel grafico.
+Con rumore gaussiano 30 dB, non sono state ottenute effettive differenze tra i valori di H senza e con il rumore. Nel codice è stato implementato un sistema per il calcolo di quest ultimo ma come si può notare in \autoref{fig:curve}, i grafici con rumore stanno nelle barre di errore.
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\linewidth]{img/rumore.png}
